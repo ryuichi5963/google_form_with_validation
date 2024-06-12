@@ -1,0 +1,15 @@
+from action
+  https://docs.google.com/forms/u/0/d/e/1FAIpQLSfnTt41bSi9ul8dI_LBSF1Pa4nHEzTbRRafY01dxfYk7qDS0w/formResponse
+
+%.@.[627101530,&quot;氏名&quot;,null,0,[[213706915,null,true,null,null,null,null,null,null,null,[]]],null,null,null,null,null,null,[null,&quot;氏名\u003cbr\u003e&quot;]],&quot;i1&quot;,&quot;i2&quot;,&quot;i3&quot;,false]
+
+%.@.[1651983586,&quot;住所&quot;,null,0,[[1309234396,null,true,null,null,null,null,null,null,null,[]]],null,null,null,null,null,null,[null,&quot;住所\u003cbr\u003e&quot;]],&quot;i5&quot;,&quot;i6&quot;,&quot;i7&quot;,false]
+
+%.@.[1936174131,&quot;性別&quot;,null,2,[[1537268430,[[&quot;男性&quot;,null,null,null,false],[&quot;女性&quot;,null,null,null,false],[&quot;回答しない&quot;,null,null,null,false]],false,null,null,null,null,null,false,null,[]]],null,null,null,null,null,null,[null,&quot;性別\u003cbr\u003e&quot;]],&quot;i9&quot;,&quot;i10&quot;,&quot;i11&quot;,false]
+
+%.@.[1560364284,&quot;生年月日&quot;,null,9,[[918087475,null,false,null,null,null,null,[false,true],null,null,[]]],null,null,null,null,null,null,[null,&quot;生年月日\u003cbr\u003e&quot;]],&quot;i22&quot;,&quot;i23&quot;,&quot;i24&quot;,false]
+
+%.@.[1269214635,&quot;メールアドレス&quot;,null,0,[[1388521585,null,true,null,[[2,102,null,&quot;正しいメールアドレスを入力してください&quot;]],null,null,null,null,null,[]]],null,null,null,null,null,null,[null,&quot;メールアドレス\u003cbr\u003e&quot;]],&quot;i27&quot;,&quot;i28&quot;,&quot;i29&quot;,false]
+
+%.@.[1261509905,&quot;問い合わせ内容&quot;,null,1,[[1054713137,null,true,null,null,null,null,null,null,null,[]]],null,null,null,null,null,null,[null,&quot;問い合わせ内容\u003cbr\u003e&quot;]],&quot;i31&quot;,&quot;i32&quot;,&quot;i33&quot;,false]
+
