@@ -8,8 +8,7 @@
     <title>Googleフォーム+GAS</title>
   </head>
   <body>
-    <h1>Googleフォームを利用したフォーム</h1>
-    <h2>Form+Sheets+GAS</h2>
+    <h1>HTMLとGASを利用したフォーム画面</h1>
     <p><span>*印は入力必須項目です</span></p>
     <div>
       <form id="myForm" action="https://script.google.com/macros/s/AKfycbwhcpMhXv9g0EavdCbYiQgRQyF00jmyrw2daOr1Nh5NRZOns9R4d3JhXPZsXYhK1uzVCg/exec">
@@ -70,16 +69,50 @@
     <script type="text/javascript">
       document.getElementById("myForm").addEventListener("submit", function (event) {
         event.preventDefault();
-        var form = event.target;
-        var formData = new FormData(form);
+        let form = event.target;
+        let formData = new FormData(form);
 
         fetch(form.action, {
           method: "POST",
           body: formData,
         })
-          .then((response) => response.text())
+          .then((response) => {
+            // responseからJSON形式のデータをJavaScriptのオブジェクト[連想配列]に変換して返す
+            return response.json();
+
+            // 流用したコード
+            // return response.text();<-- response.json()との違い
+          })
           .then((data) => {
-            document.getElementById("response").innerHTML = data;
+            // エラー表示
+            let html = "";
+            let delayTime = 0;
+            const errs = document.querySelectorAll(".err");
+            console.log(errs);
+
+            //既にエラー表示があるときはディレイ時間300ミリ秒をセットして、削除する
+            if (errs.length != 0) {
+              // ディレイ時間設定
+              delayTime = 300;
+
+              // エラー表示を削除
+              for (let i = 0; i < errs.length; ++i) {
+                errs[i].remove();
+              }
+            }
+
+            // 初期状態のときはディレイ時間なしでエラーを表示
+            // 既にエラーがあるときセットした300ミリ秒のディレイを付けて再表示
+            setTimeout(() => {
+              for (let key in data) {
+                if (key != "v") {
+                  html = '<p class="err">' + data[key] + "</p>";
+                  document.getElementById(key).parentElement.insertAdjacentHTML("afterend", html);
+                } else {
+                  document.getElementById("response").innerHTML = key;
+                }
+              }
+            }, delayTime);
           })
           .catch((error) => {
             console.error(error);
