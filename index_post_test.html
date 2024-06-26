@@ -28,15 +28,15 @@
         <div class="form-input">
           <label for="">性別</label>
           <div class="radio">
-            <input type="radio" name="male" id="male" value="男性" />
+            <input type="radio" name="gender" id="male" value="男性" />
             <p>男性</p>
           </div>
           <div class="radio">
-            <input type="radio" name="female" id="female" value="女性" />
+            <input type="radio" name="gender" id="female" value="女性" />
             <p>女性</p>
           </div>
           <div class="radio">
-            <input type="radio" name="no-answer" id="no-answer" value="回答しない" />
+            <input type="radio" name="gender" id="no-answer" value="回答しない" />
             <p>回答しない</p>
           </div>
         </div>
@@ -109,7 +109,15 @@
                   html = '<p class="err">' + data[key] + "</p>";
                   document.getElementById(key).parentElement.insertAdjacentHTML("afterend", html);
                 } else {
-                  document.getElementById("response").innerHTML = key;
+                  console.log("Current URL:", window.location.href);
+                  console.log("Target URL:", window.location.origin + "/thanks.html");
+
+                  // 相対パスを使用してリダイレクト
+                  window.location.href = "./thanks.html";
+
+                  // 絶対パスを使用してリダイレクト
+                  // window.location.href = window.location.origin + "/thanks.html";
+                  // document.getElementById("response").innerHTML = key;
                 }
               }
             }, delayTime);
