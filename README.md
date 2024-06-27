@@ -1,7 +1,7 @@
 # HTMLとGAS(Google Apps Script)との連携
 
 ## 機能
-・HTMLとCSSでフォーム画面を制作
+・HTMLとCSSでフォーム画面を制作  
 ・フォームに入力された内容をJavascriptの非同期通信でPOST送信  
 ・GASでPOSTされた内容を受信しバリデーションチェックを行う  
 ・バリデーションチェックを行った結果、エラーがある場合は以下の動作を行う  
