@@ -66,3 +66,26 @@ button {
   margin: 5px auto 20px 10px;
   color: red;
 }
+
+@media screen and (width <= 768px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  /*
+  * フォーム
+  */
+  .form-input {
+    flex-direction: column;
+  }
+
+  /* フォームラベル */
+  .form-input label {
+    width: auto;
+  }
+
+  /* ラジオボタン */
+  .form-input .radio:first-of-type input {
+    margin-left: 5px;
+  }
+}
